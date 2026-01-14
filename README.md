@@ -1,4 +1,4 @@
-# 🚀 Project: Automated RHEL-to-S3 Log Vault
+# Project: Automated RHEL-to-S3 Log Vault
 
 ### **Executive Summary**
 I engineered a secure, automated backup pipeline for Red Hat Enterprise Linux (RHEL 9) that synchronizes system logs to Amazon S3. This project demonstrates advanced integration of Linux administration, Bash automation, and AWS security best practices.
