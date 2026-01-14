@@ -1,21 +1,20 @@
-# Project: The RHEL 9 Cloud Log Vault
+# 🚀 Project: Automated RHEL-to-S3 Log Vault
 
-### **Objective**
-I engineered a secure, automated backup pipeline for Red Hat Enterprise Linux (RHEL 9) that compresses system logs and synchronizes them to Amazon S3. This project demonstrates integration between Linux administration, Bash scripting, and AWS IAM security best practices.
+### **Executive Summary**
+I engineered a secure, automated backup pipeline for Red Hat Enterprise Linux (RHEL 9) that synchronizes system logs to Amazon S3. This project demonstrates advanced integration of Linux administration, Bash automation, and AWS security best practices.
 
-### **Technical Architecture**
+### **The Architecture**
 * **Compute**: RHEL 9 (Amazon EC2)
-* **Storage**: Amazon S3 (Log Vault Bucket)
+* **Storage**: Amazon S3 (Bucket: `kw21-rhel-logs-2026`)
 * **Security**: IAM Role with a custom JSON policy enforcing the **Principle of Least Privilege**
-* **Automation**: Bash Scripting and Crontab
+* **Automation**: Bash Scripting and Crontab scheduling
 
-### **Key Features**
-* **Keyless Security**: Implemented an IAM Instance Profile, allowing the server to assume a role and fetch temporary credentials. This eliminates the risk of hardcoded AWS Access Keys.
-* **Efficient Backup**: Utilized a Bash script to perform high-compression `tar` backups of restricted log directories.
-* **Operational Excellence**: Scheduled a recurring cron job for **02:00 AM daily execution**, ensuring 100% automated data durability.
+### **Technical Deep-Dive**
+* **Keyless Security**: Implemented an **IAM Instance Profile**, allowing the EC2 instance to assume a role and fetch temporary security credentials. This eliminates the risk of hardcoded AWS Access Keys.
+* **Data Integrity**: Developed a Bash script that utilizes `tar` with administrative privileges to perform high-compression backups of restricted `/var/log` directories.
+* **Operational Excellence**: Configured a recurring cron job for **02:00 AM daily execution**, ensuring 100% automated data durability without human intervention.
 
 ### **Verification (Proof of Concept)**
-The screenshot below confirms the full stack health check: 
-1. The logic of the **Bash Script**.
-2. The active state of the **Crontab schedule**.
-3. The successful arrival of the backup file in **Amazon S3**.
+The screenshot below verifies the full stack health check, confirming the script logic, active automation schedule, and successful cloud synchronization:
+
+![Full Stack Verification](./image_a80a4d.png)
