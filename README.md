@@ -1,4 +1,4 @@
-# Project: Automated RHEL 9 System Log Synchronization to Amazon S3
+## Automated RHEL 9 System Log Synchronization to Amazon S3
 
 ## Executive Summary
 This project demonstrates the implementation of a secure, automated backup pipeline for Red Hat Enterprise Linux (RHEL 9) system logs. The solution utilizes a Bash-based automation script and the AWS Command Line Interface (CLI) to synchronize compressed log archives to an Amazon S3 "Log Vault". The architecture emphasizes security by utilizing IAM Roles for keyless authentication, effectively removing the risk of hardcoded credentials.
